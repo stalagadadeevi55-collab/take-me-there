@@ -1,0 +1,59 @@
+:root {
+  --bg-dark: #121212;
+  --bg-surface: #1e1e1e;
+  --bg-surface-glass: rgba(30, 30, 30, 0.85);
+  
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  
+  --primary-accent: #00E676; /* Vibrant Green */
+  --primary-accent-dim: rgba(0, 230, 118, 0.15);
+  --danger-accent: #FF5252;
+  
+  --border-dim: rgba(255,255,255,0.08);
+  --shadow-float: 0 8px 32px rgba(0, 0, 0, 0.4);
+  
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-dark);
+}
+
+/* PWA Standard Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100dvh; /* Mobile viewport standard */
+  width: 100vw;
+  overflow: hidden; /* Prevent bouncing/scrolling on root */
+  overscroll-behavior-y: none;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* App Container Layout */
+.app-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Generic Utilities */
+.glass-panel {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-dim);
+  box-shadow: var(--shadow-float);
+}
